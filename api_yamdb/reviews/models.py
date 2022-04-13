@@ -64,8 +64,7 @@ class Title(models.Model):
     year = models.IntegerField(
         'Дата выпуска',
         validators=[MaxValueValidator(timezone.now().year),
-                    MinValueValidator(0)
-                    ]
+                    MinValueValidator(0)]
         )
     category = models.ForeignKey(
         Category,
